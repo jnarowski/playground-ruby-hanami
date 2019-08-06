@@ -1,0 +1,16 @@
+version: "3"
+services:
+  db:
+    container_name: postgres_playground
+    image: postgres:11.4
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: username
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: playground_ruby_hanami_dev
+      PGDATA: /var/lib/postgresql/data/11-4
+networks:
+  default:
+    external:
+      name: playground_default
