@@ -5,7 +5,8 @@ module Web
         include Web::Action
 
         def call(_params)
-          raw({ foo: 'bar' }.to_json)
+          self.status = 200
+          self.body = { hello: 'world' }.to_json
         end
       end
     end
