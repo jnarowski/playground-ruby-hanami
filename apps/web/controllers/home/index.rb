@@ -6,7 +6,7 @@ module Web
 
         def call(_params)
           self.status = 200
-          self.body = { hello: 'world' }.to_json
+          self.body = { hello: 'worlds' }.to_json
         end
       end
     end
